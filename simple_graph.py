@@ -11,7 +11,9 @@ def main():
     f = Scalar(3)
     g = e + f
     h = g.relu()
-    loss = h+d
+    goal = Scalar(6)
+    i = h+d
+    loss = i.regression(goal)
     loss.backward()
     viz = Viz(loss)
     viz.view()    
